@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W1K — Atari XL/XE projects</title>
+<meta name="description" content="W1K — Atari 800XE/XL projects: games, ports and tools in 6502 assembly, VBXE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --panel: #161a22;
+    --line: #262c38;
+    --text: #d8dde6;
+    --muted: #8a93a3;
+    --accent: #f0a020;
+    --link: #6cb6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 "IBM Plex Sans", system-ui, sans-serif;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    padding: 40px 24px 28px;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 14px;
+    font: 400 clamp(22px, 4vw, 40px)/1.2 "Press Start 2P", monospace;
+    color: var(--accent);
+    letter-spacing: 2px;
+  }
+  header p { margin: 0; color: var(--muted); }
+  header nav { margin-top: 14px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+  main {
+    padding: 28px 24px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .shots { display: flex; background: #000; aspect-ratio: 4 / 3; }
+  .shots a { flex: 1; display: block; min-width: 0; }
+  .shots img { width: 100%; height: 100%; object-fit: contain; display: block; image-rendering: pixelated; }
+  .body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .body h2 { margin: 0; font: 400 14px/1.5 "Press Start 2P", monospace; color: #fff; }
+  .body p { margin: 0; }
+  .meta { margin-top: auto; font-size: 14px; color: var(--muted); }
+  .tag {
+    display: inline-block;
+    padding: 1px 8px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  footer { padding: 24px; border-top: 1px solid var(--line); text-align: center; }
+  footer img { height: 44px; }
+
+  @media (max-width: 600px) {
+    header, main { padding-left: 16px; padding-right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>W1K</h1>
+  <p>Atari 800XE/XL — games, ports and tools. AI projects.</p>
+  <nav>
+    <a href="https://github.com/viktorcech">github.com/viktorcech</a>
+    <a href="https://buymeacoffee.com/w1kk">Buy Me a Coffee</a>
+  </nav>
+</header>
+
+<main>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/snookervbxe"><img src="assets/snooker.png" alt="ATARI SNOOKER: title screen"></a></div>
+    <div class="body">
+      <h2>ATARI SNOOKER</h2>
+      <p>Snooker for the Atari XL/XE — match, tournament and trick shots. 6502 assembly, needs VBXE.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/snookervbxe">github.com/viktorcech/snookervbxe</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/chleba"><img src="assets/chleba.png" alt="CHLEBA: opens ATR disk images under SpartaDOS X"></a></div>
+    <div class="body">
+      <h2>CHLEBA</h2>
+      <p>SpartaDOS X command for opening ATR disk images on a SIDE3 card: the image becomes drive D1:
+         (read and write, at SD card speed) and the Atari boots from it.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/chleba">github.com/viktorcech/chleba</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots">
+      <a href="https://github.com/viktorcech/robbo-pmd"><img src="assets/robbo1.png" alt="ROBBO for PMD 85-2: title screen"></a>
+      <a href="https://github.com/viktorcech/robbo-pmd"><img src="assets/robbo2.png" alt="ROBBO for PMD 85-2: planet 1"></a>
+    </div>
+    <div class="body">
+      <h2>ROBBO for PMD 85-2</h2>
+      <p>Port ATARI XE/XL Robbo for PMD-85</p>
+      <div class="meta"><a href="https://github.com/viktorcech/robbo-pmd">github.com/viktorcech/robbo-pmd</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><img src="assets/terep2.png" alt="Terep 2"></div>
+    <div class="body">
+      <h2>Terep 2 (a.k.a. Deformers)</h2>
+      <p>Little port of Terep 2 (a.k.a. Deformers) for ATARI XE/XL Needs VBXE and 65816.</p>
+      <div class="meta"><span class="tag">demo · WIP</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/doom-vbxe"><img src="assets/doom-vbxe.png" alt="DOOM VBXE"></a></div>
+    <div class="body">
+      <h2>DOOM VBXE</h2>
+      <p>DOOM for the Atari XL/XE — Requires VBXE and 65816.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/doom-vbxe">github.com/viktorcech/doom-vbxe</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/doom2d-atari"><img src="assets/doom2d.png" alt="Doom 2D VBXE"></a></div>
+    <div class="body">
+      <h2>Doom 2D VBXE</h2>
+      <p>Side-scrolling action game in the style of Doom 2D for the Atari XL/XE.
+         6502 assembly, VBXE graphics.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/doom2d-atari">github.com/viktorcech/doom2d-atari</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/qros-loader"><img src="assets/qros.png" alt="QROS Loader"></a></div>
+    <div class="body">
+      <h2>QROS Loader</h2>
+      <p>Turbo tape loader for the QROS/EMO system on the Atari XL/XE. 6502 assembly — streams
+         the tape through POKEY and parses the XEX format on the fly.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/qros-loader">github.com/viktorcech/qros-loader</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/qros-generator"><img src="assets/qros-generator.png" alt="QROS Generator"></a></div>
+    <div class="body">
+      <h2>QROS Generator</h2>
+      <p>Tape image generator for the QROS/EMO turbo system — converts Atari XEX/COM/OBX
+         executables into CAS and WAV tapes. Python, GUI and command line.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/qros-generator">github.com/viktorcech/qros-generator</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><img src="assets/ufo.png" alt="UFO: Enemy Unknown VBXE"></div>
+    <div class="body">
+      <h2>UFO: Enemy Unknown VBXE</h2>
+      <p>Port of UFO: Enemy Unknown (X-COM) — for Atari XL/XE. Needs VBXE</p>
+      <div class="meta"><span class="tag">demo · WIP</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/another-world-vbxe"><img src="assets/another-world.png" alt="Another World VBXE"></a></div>
+    <div class="body">
+      <h2>Another World VBXE</h2>
+      <p>Port of the cinematic adventure Another World for the Atari XL/XE.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/another-world-vbxe">github.com/viktorcech/another-world-vbxe</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/wolfenstein3d-vbxe"><img src="assets/wolf3d.png" alt="Wolfenstein 3D VBXE"></a></div>
+    <div class="body">
+      <h2>Wolfenstein 3D VBXE</h2>
+      <p>Raycasting FPS in the style of Wolfenstein 3D for the Atari XL/XE.</p>
+      <div class="meta"><a href="https://github.com/viktorcech/wolfenstein3d-vbxe">github.com/viktorcech/wolfenstein3d-vbxe</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="shots"><a href="https://github.com/viktorcech/cactus-browser"><img src="assets/cactus.png" alt="Cactus Browser VBXE"></a></div>
+    <div class="body">
+      <h2>Cactus Browser VBXE</h2>
+      <p>Web browser for the Atari XL/XE — surf the internet right on an 8-bit machine.
+         Requires VBXE, FujiNet and an ST mouse (port 2).</p>
+      <div class="meta"><a href="https://github.com/viktorcech/cactus-browser">github.com/viktorcech/cactus-browser</a></div>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <a href="https://buymeacoffee.com/w1kk"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee"></a>
+</footer>
+
+</body>
+</html>
